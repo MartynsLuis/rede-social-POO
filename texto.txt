@@ -1,0 +1,59 @@
+Exercise 11.1: Open your last version of the network project. (You can use network-v2 if you
+do not have your own version yet.) Remove the display method from class Post and move
+it into the MessagePost and PhotoPost classes. Compile. What do you observe?
+
+  Exercise 11.1 resposta: Logo de cara ocorre um erro de compilação nas duas classes, pois o metodo display tenta usar
+atributos que pertencem a post e são privados, logo eles não conseguem usar estes atributos no metodos, tambem ocorre
+um erro na clase newsfeed pois ela tenta acessar a função display apartir do post porem como post é a super-clase e 
+não pode acessar os metodos das classes filhas alem de não ter o metodo display, acaba que o newsfeed não consegue chamar o
+display apartir da clase post.
+
+
+Exercise 11.2: In your network project, add a display method in class Post again. For
+now, write the method body with a single statement that prints out only the username. Then
+modify the display methods in MessagePost and PhotoPost so that the MessagePost
+version prints out only the message and the PhotoPost version prints only the caption. This
+removes the other errors encountered above (we shall come back to those below).
+You should now have a situation corresponding to Figure 11.4, with display methods in three
+classes. Compile your project. (If there are errors, remove them. This design should work.)
+Before executing, predict which of the display methods will get called if you execute the
+news feed’s show method.
+Try it out. Enter a message post and a photo post into the news feed and call the news feed’s
+show method. Which display methods were executed? Was your prediction correct? Try to
+explain your observations.
+
+  Exercise 11.2 resposta: Como já foi visto em aula deduzo que o display a ser executado será o da classe filha, após
+executar o resultado foi o esperado na hora de chamar o display o que é executado é o display da classe filha
+correspondente.
+
+Exercise 11.3: Modify your latest version of the network project to include the super call in the
+display method. Test it. Does it behave as expected? Do you see any problems with this solution?
+
+  Exercise 11.3 resposta: Sim o programa roda normalmente sem nenhum problema aparente, agora  quando o display é
+executado ele utiliza o display da classe post e da subclasse correspondente.
+
+Exercise 11.4: Look up toString in the library documentation. What are its parameters?
+What is its return type?
+
+  Exercise 11.4 resposta: O metodo toString não precisa de um parametro ela funciona no objeto servindo pra mostrar
+uma representação textual do objeto em questão, o retorno do metodo é uma String.
+
+Exercise 11.5: You can easily try this out. Create an object of class PhotoPost in your
+project, and then invoke the toString method from the Object submenu in the object’s
+pop-up menu.
+
+  Exercise 11.5 resposta: 
+
+Exercise 11.6: The version of display shown in Code 11.2 produces the output shown in
+Figure 11.9. Reorder the statements in the method in your version of the network project so that
+it prints the details as shown in Figure 11.10.
+
+  Exercise 11.6 resposta: 
+
+Exercise 11.7: Having to use a superclass call in display is somewhat restrictive in the ways in
+which we can format the output, because it is dependent on the way the superclass formats its fields.
+Make any necessary changes to the Post class and to the display method of MessagePost so
+that it produces the output shown in Figure 9.11. Any changes you make to the Post class should
+be visible only to its subclasses. Hint: You could add protected accessors to do this.
+
+  Exercise 11.7 resposta: 
